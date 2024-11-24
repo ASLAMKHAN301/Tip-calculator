@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- In your HTML <head> -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+
+    <title>Tip calculator app</title>
+</head>
+<body class="relative bg-lightGrayishCyan">
+    <img src="images/logo.svg" alt="" class="absolute -top-48 right-80 md:top-16 md:right-[650px]">
+    
+    <div class="flex justify-center items-center h-screen font-spaceMono my-60 md:my-0">
+        <div class="flex flex-col space-y-6 md:space-y-0 md:space-x-10 md:flex-row rounded-xl bg-white p-8">
+            <form class="text-darkGrayishCyan font-bold ">
+                <p class="text-sm ">Bill</p>
+                <div class="relative">
+                    <input type="text" placeholder="0" class="Bill bg-veryLightGrayishCyan py-1 rounded-sm w-full text-right 
+                    text-veryDarkCyan outline-strongCyan px-4">
+                    <img src="images/icon-dollar.svg" alt="" class="absolute top-2 left-4">
+                </div>
+                <p class="text-sm mt-6">Select Tip %</p>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mt-5 max-w-xs">
+                    <button class="button rounded-md bg-veryDarkCyan text-white hover:bg-strongCyan
+                     hover:text-veryDarkCyan px-10 py-2">5%</button>
+                     <button class="button rounded-md bg-veryDarkCyan text-white hover:bg-strongCyan
+                     hover:text-veryDarkCyan px-10 py-2">10%</button>
+                     <button class="button rounded-md bg-veryDarkCyan text-white hover:bg-strongCyan
+                     hover:text-veryDarkCyan px-10 py-2">15%</button>
+                     <button class="button rounded-md bg-veryDarkCyan text-white hover:bg-strongCyan
+                     hover:text-veryDarkCyan px-10 py-2">25%</button>
+                     <button class="button rounded-md bg-veryDarkCyan text-white hover:bg-strongCyan
+                     hover:text-veryDarkCyan px-10 py-2">50%</button>
+                     <input type="text" placeholder="Custom" class="input rounded-md bg-veryLightGrayishCyan 
+                     py-2 text-right text-veryDarkCyan outline-strongCyan placeholder:text-center ">
+                     
+                </div>
+                <div class="flex justify-between mt-6">
+                    <p class="text-sm">Number of People</p>
+                    <p class="hidden error-message text-sm text">Can't be zero</p>
+                </div>
+                
+                <div class="relative mt-1">
+                    <input type="text" placeholder="0" class="nop bg-veryLightGrayishCyan py-1 rounded-sm w-full text-right 
+                    text-veryDarkCyan outline-strongCyan px-4">
+                    <img src="images/icon-person.svg" alt="" class="absolute top-2 left-4">
+                </div>
+            </form>
+            <div class="rounded-md bg-veryDarkCyan max-w-xl px-8">
+                <div class="flex justify-between font-bold mt-10 w-full space-x-20">
+                    <div class="">
+                        <p class="text-sm text-white">Tip Amount</p>
+                        <p class="text-xs text-grayishCyan">/ person</p>
+                    </div>
+                    <h1 class="text-strongCyan text-3xl tipAmount">$0.00</h1>
+                </div>
+                <div class="flex justify-between font-bold mt-10 w-full">
+                    <div class="">
+                        <p class="text-sm text-white">Total</p>
+                        <p class="text-xs text-grayishCyan">/ person</p>
+                    </div>
+                    <h1 class="text-strongCyan text-3xl totalAmount">$0.00</h1>
+                </div>
+                <button class="reset rounded-md bg-strongCyan text-veryDarkCyan w-full mt-20 py-2 
+                font-bold uppercase tracking-wide hover:bg-lightGrayishCyan mb-6 md:mb-0">Reset</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
